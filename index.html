@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rights Chocolate — Made Right. Chocolate de origen único, Ecuador</title>
+  <meta name="description" content="Chocolate premium de origen único ecuatoriano. Lo correcto sabe extraordinario.">
+  <meta property="og:title" content="Rights Chocolate — Made Right.">
+  <meta property="og:description" content="Lo correcto sabe extraordinario. Chocolate de origen único, Ecuador.">
+  <meta property="og:image" content="assets/video/fountain-poster.jpg">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1F1008">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F1008'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='700' text-anchor='middle' fill='%23C9A24A'%3ER%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top" aria-label="Rights Chocolate">
+    <span class="nav__word">Rights</span><span class="nav__dot">.</span>
+  </a>
+  <nav class="nav__links" aria-label="Principal">
+    <a href="#origen" data-i18n="nav.origin">Origen</a>
+    <a href="#proceso" data-i18n="nav.process">Proceso</a>
+    <a href="#tienda" data-i18n="nav.shop">Chocolates</a>
+    <a href="#mayoristas" data-i18n="nav.wholesale">Mayoristas</a>
+  </nav>
+  <div class="nav__right">
+    <button class="lang" id="lang-toggle" type="button" aria-label="Cambiar idioma">
+      <span data-lang="es" class="is-on">ES</span><span class="lang__sep">/</span><span data-lang="en">EN</span>
+    </button>
+    <a class="btn btn--gold btn--sm" href="#tienda" data-i18n="nav.buy">Comprar</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <video class="hero__video" autoplay muted loop playsinline preload="auto"
+         poster="assets/video/fountain-poster.jpg"
+         data-src-desktop="assets/video/fountain-loop.mp4"
+         data-src-mobile="assets/video/fountain-vertical-loop.mp4"></video>
+  <div class="hero__shade"></div>
+  <div class="hero__content">
+    <p class="eyebrow" data-i18n="hero.eyebrow">Chocolate de origen único · Ecuador</p>
+    <h1 class="hero__title">Made Right<span class="gold">.</span></h1>
+    <p class="hero__slogan" data-i18n="hero.slogan">Lo correcto sabe extraordinario.</p>
+    <p class="hero__echo" data-i18n="hero.echo">What’s done right, tastes extraordinary.</p>
+    <div class="hero__cta">
+      <a class="btn btn--gold" href="#tienda" data-i18n="hero.cta1">Comprar chocolate</a>
+      <a class="btn btn--ghost" href="#story" data-i18n="hero.cta2">Conocer el origen</a>
+    </div>
+  </div>
+  <div class="hero__cue" aria-hidden="true">
+    <span data-i18n="hero.cue">Desliza</span>
+    <i></i>
+  </div>
+</section>
+
+<!-- ===== 3D STORY (pinned) ===== -->
+<section class="story" id="story" aria-label="Historia">
+  <div class="story__pin">
+    <canvas id="story-canvas" class="story__canvas" aria-hidden="true"></canvas>
+    <div class="story__vignette"></div>
+
+    <div class="beat" data-beat="0">
+      <p class="beat__label"><span data-i18n="beat0.label">01 — Origen</span></p>
+      <h2 class="beat__title" data-i18n="beat0.title">Nace en la sombra del árbol.</h2>
+      <p class="beat__text" data-i18n="beat0.text">Cacao Nacional fino de aroma, cultivado bajo bosque en Ecuador. Cada grano fermenta cinco días antes de tocar nuestras manos.</p>
+    </div>
+    <div class="beat beat--right" data-beat="1">
+      <p class="beat__label"><span data-i18n="beat1.label">02 — Templado</span></p>
+      <h2 class="beat__title" data-i18n="beat1.title">Treinta y un grados. Ni uno más.</h2>
+      <p class="beat__text" data-i18n="beat1.text">Templar es ordenar los cristales del cacao hasta que brillen y chasqueen. Es paciencia convertida en textura.</p>
+    </div>
+    <div class="beat" data-beat="2">
+      <p class="beat__label"><span data-i18n="beat2.label">03 — Manos</span></p>
+      <h2 class="beat__title" data-i18n="beat2.title">Hecho por maestros. Sin excepción.</h2>
+      <p class="beat__text" data-i18n="beat2.text">Cada barra pasa por manos que dominan su oficio. La inclusión aquí no es un gesto: es maestría.</p>
+    </div>
+    <div class="beat beat--center" data-beat="3">
+      <p class="beat__label"><span data-i18n="beat3.label">04 — Made Right.</span></p>
+      <h2 class="beat__title beat__title--xl" data-i18n="beat3.title">Lo correcto sabe extraordinario.</h2>
+      <p class="beat__text" data-i18n="beat3.text">Rómpela. Escucha el chasquido. Así suena hacer las cosas bien.</p>
+    </div>
+
+    <div class="story__progress" aria-hidden="true"><i id="story-bar"></i></div>
+  </div>
+</section>
+
+<!-- ===== ORIGIN ===== -->
+<section class="origin section" id="origen">
+  <div class="origin__media">
+    <video class="lazy-video" muted loop playsinline preload="none"
+           poster="assets/video/origin-poster.jpg"
+           data-src-desktop="assets/video/origin-loop.mp4"
+           data-src-mobile="assets/video/origin-loop-720.mp4"></video>
+    <span class="media-credit" data-i18n="origin.credit">Video: Kokopods / Bhat‘n’Bhat, CC BY 3.0</span>
+  </div>
+  <div class="origin__copy">
+    <p class="eyebrow" data-i18n="origin.eyebrow">Origen</p>
+    <h2 class="h2" data-i18n="origin.title">Ecuador, donde el cacao nació con nombre.</h2>
+    <p class="lead" data-i18n="origin.lead">Trabajamos con cacao Nacional “Arriba”, la variedad fino de aroma que solo crece bien aquí. Lo compramos directo, lo fermentamos con calma y lo tostamos bajo.</p>
+    <ul class="facts">
+      <li><strong>Arriba Nacional</strong><span data-i18n="origin.f1">Variedad fino de aroma. Menos del 5 % del cacao del mundo.</span></li>
+      <li><strong>5 <em data-i18n="origin.f2u">días</em></strong><span data-i18n="origin.f2">De fermentación en cajas de madera antes del secado al sol.</span></li>
+      <li><strong>1 <em data-i18n="origin.f3u">origen</em></strong><span data-i18n="origin.f3">Un solo origen por barra. Nada de mezclas anónimas.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== PROCESS (scroll-scrub video) ===== -->
+<section class="process" id="proceso" aria-label="Proceso">
+  <div class="process__pin">
+    <video id="scrub-video" class="process__video" muted playsinline preload="auto"
+           poster="assets/video/pour-poster.jpg"
+           data-src-desktop="assets/video/pour-scrub.mp4"
+           data-src-mobile="assets/video/pour-scrub-720.mp4"></video>
+    <div class="process__shade"></div>
+    <div class="process__copy">
+      <p class="eyebrow" data-i18n="process.eyebrow">Proceso</p>
+      <div class="process__beats">
+        <h2 class="process__beat" data-pbeat="0" data-i18n="process.b0">Tostado lento, a baja temperatura.</h2>
+        <h2 class="process__beat" data-pbeat="1" data-i18n="process.b1">Conchado durante setenta y dos horas.</h2>
+        <h2 class="process__beat" data-pbeat="2" data-i18n="process.b2">Templado a mano, sobre mármol.</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SHOP ===== -->
+<section class="shop section" id="tienda">
+  <div class="shop__head">
+    <p class="eyebrow" data-i18n="shop.eyebrow">Chocolates</p>
+    <h2 class="h2" data-i18n="shop.title">Tres barras. Un solo estándar.</h2>
+  </div>
+  <div class="shop__grid">
+    <article class="product" data-product="70">
+      <div class="product__stage"><canvas class="product__canvas" data-variant="dark" aria-hidden="true"></canvas></div>
+      <div class="product__body">
+        <p class="product__pct">70 %</p>
+        <h3 class="product__name" data-i18n="shop.p1.name">Oscuro</h3>
+        <p class="product__desc" data-i18n="shop.p1.desc">Cacao Nacional y azúcar de caña. Nada más.</p>
+        <div class="product__row">
+          <span class="product__price">$ 6.50</span>
+          <a class="btn btn--gold btn--sm" data-pay="70" href="#" data-i18n="shop.add">Agregar</a>
+        </div>
+      </div>
+    </article>
+    <article class="product" data-product="55">
+      <div class="product__stage"><canvas class="product__canvas" data-variant="milk" aria-hidden="true"></canvas></div>
+      <div class="product__body">
+        <p class="product__pct">55 %</p>
+        <h3 class="product__name" data-i18n="shop.p2.name">Leche</h3>
+        <p class="product__desc" data-i18n="shop.p2.desc">Leche entera ecuatoriana. Redondo, sin empalagar.</p>
+        <div class="product__row">
+          <span class="product__price">$ 6.50</span>
+          <a class="btn btn--gold btn--sm" data-pay="55" href="#" data-i18n="shop.add">Agregar</a>
+        </div>
+      </div>
+    </article>
+    <article class="product" data-product="85">
+      <div class="product__stage"><canvas class="product__canvas" data-variant="intense" aria-hidden="true"></canvas></div>
+      <div class="product__body">
+        <p class="product__pct">85 %</p>
+        <h3 class="product__name" data-i18n="shop.p3.name">Intenso</h3>
+        <p class="product__desc" data-i18n="shop.p3.desc">Para quien ya sabe lo que busca.</p>
+        <div class="product__row">
+          <span class="product__price">$ 7.00</span>
+          <a class="btn btn--gold btn--sm" data-pay="85" href="#" data-i18n="shop.add">Agregar</a>
+        </div>
+      </div>
+    </article>
+  </div>
+  <p class="shop__note" data-i18n="shop.note">Envío a todo Ecuador. Barras de 80 g.</p>
+</section>
+
+<!-- ===== MASTERS / INCLUSION ===== -->
+<section class="masters" id="maestros">
+  <video class="masters__video lazy-video" muted loop playsinline preload="none"
+         poster="assets/video/hands-poster.jpg"
+         data-src-desktop="assets/video/hands-loop.mp4"
+         data-src-mobile="assets/video/hands-loop-720.mp4"></video>
+  <div class="masters__shade"></div>
+  <div class="masters__copy">
+    <p class="eyebrow" data-i18n="masters.eyebrow">Taller</p>
+    <h2 class="h2 h2--xl" data-i18n="masters.title">Hecho por maestros. Sin excepción.</h2>
+    <p class="lead" data-i18n="masters.lead">Nuestro taller está en manos de maestros chocolateros con discapacidad. No lo contamos por caridad. Lo contamos porque su trabajo es el estándar de esta casa.</p>
+    <a class="link-arrow" href="#mayoristas" data-i18n="masters.cta">Conoce el taller</a>
+  </div>
+  <span class="media-credit media-credit--dark" data-i18n="masters.credit">Video: Kokopods / Bhat‘n’Bhat, CC BY 3.0</span>
+</section>
+
+<!-- ===== WHOLESALE ===== -->
+<section class="wholesale section" id="mayoristas">
+  <div class="wholesale__inner">
+    <div>
+      <p class="eyebrow" data-i18n="ws.eyebrow">Mayoristas y regalos corporativos</p>
+      <h2 class="h2" data-i18n="ws.title">Chocolate con tu nombre, hecho bien.</h2>
+      <p class="lead" data-i18n="ws.lead">Hoteles, cafés, empresas. Cuéntanos de tu negocio y te enviamos el catálogo y precios en menos de 24 horas.</p>
+    </div>
+    <form class="wsform" id="wholesale-form" novalidate>
+      <label class="sr-only" for="ws-email" data-i18n="ws.label">Correo</label>
+      <input id="ws-email" type="email" name="email" required placeholder="tu@empresa.com" autocomplete="email">
+      <button class="btn btn--gold" type="submit" data-i18n="ws.cta">Quiero el catálogo</button>
+      <p class="wsform__msg" id="ws-msg" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer__brand">
+    <span class="nav__word">Rights</span><span class="nav__dot">.</span>
+    <p data-i18n="footer.tag">Chocolate de origen único · Guayaquil, Ecuador</p>
+  </div>
+  <nav class="footer__links" aria-label="Pie">
+    <a href="#origen" data-i18n="nav.origin">Origen</a>
+    <a href="#tienda" data-i18n="nav.shop">Chocolates</a>
+    <a href="#mayoristas" data-i18n="nav.wholesale">Mayoristas</a>
+    <a href="assets/video/CREDITS.md" data-i18n="footer.credits">Créditos de video</a>
+  </nav>
+  <p class="footer__legal">© <span id="year"></span> Rights Chocolate. <span data-i18n="footer.mock">Mockup — no es una tienda activa.</span></p>
+</footer>
+
+<!-- ===== AI CONCIERGE (placeholder) ===== -->
+<div id="concierge-widget" class="rita">
+  <button class="rita__bubble" id="rita-btn" type="button" aria-expanded="false" aria-controls="rita-panel">
+    <span class="rita__r">R</span>
+    <span class="rita__label" data-i18n="rita.label">Habla con Rita</span>
+  </button>
+  <div class="rita__panel" id="rita-panel" hidden>
+    <p class="rita__title">Rita</p>
+    <p class="rita__text" data-i18n="rita.text">Soy la concierge de Rights. Pronto podré ayudarte a elegir tu barra, resolver envíos y armar pedidos corporativos.</p>
+    <p class="rita__hint">WIDGET_SCRIPT</p>
+  </div>
+</div>
+
+<script src="vendor/three.min.js"></script>
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
