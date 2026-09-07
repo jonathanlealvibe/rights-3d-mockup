@@ -1,11 +1,11 @@
 /* Rights v3 — shell compartido: idioma, carrito, WhatsApp, videos, reveal, formularios, concierge.
    ===== Constantes para el equipo ===== */
-var WHATSAPP_NUMBER = '593900000000';   // pedidos (internacional sin +)   [DATO RIGHTS]
-var WHATSAPP_B2B = '593900000000';      // empresas / HORECA               [DATO RIGHTS]
+var WHATSAPP_NUMBER = '593995178745';   // pedidos: +593 99 517 8745 (real, ficha Google y sitio actual)
+var WHATSAPP_B2B = '593995178745';      // empresas / HORECA: mismo número hasta que Rights asigne uno
 var PAYMENT_LINK = '#';                 // checkout PayPhone / Kushki / PayPal
 var FORM_ENDPOINT = '';                 // webhook CONCIERGE (GHL)
 var WIDGET_SCRIPT = '';                 // concierge IA
-var CUTOFF_HOUR = 14;                   // corte despacho mismo día, Guayaquil (UTC-5)
+var CUTOFF_HOUR = 14;                   // corte despacho mismo día, Quito (UTC-5)
 var FREE_SHIPPING = 30;                 // USD
 var LOTE = { num: 9, name: 'Nacional 70 %', total: 300, left: 140, roast: '2 de septiembre', next: 'octubre' };
 var SEASON_DEADLINE = '2026-11-30';
@@ -75,7 +75,7 @@ var PRODUCTS = {
     if (day === 0 || day === 6) return lang === 'en' ? 'Weekend orders ship Monday' : 'Pedidos del fin de semana salen el lunes';
     if (diff <= 0) return lang === 'en' ? 'Order now, ships tomorrow first thing' : 'Pide ahora y sale mañana a primera hora';
     var h = Math.floor(diff / 3600000), m = Math.floor((diff % 3600000) / 60000);
-    return lang === 'en' ? 'Order in ' + (h ? h + ' h ' : '') + m + ' min and it ships today in Guayaquil' : 'Pide en ' + (h ? h + ' h ' : '') + m + ' min y sale hoy en Guayaquil';
+    return lang === 'en' ? 'Order in ' + (h ? h + ' h ' : '') + m + ' min and it ships today in Quito' : 'Pide en ' + (h ? h + ' h ' : '') + m + ' min y sale hoy en Quito';
   }
   function tick() { $$('[data-cutoff]').forEach(function (el) { el.textContent = cutoffText(); }); }
   setInterval(tick, 30000);
