@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rights Chocolate — Lo correcto sabe extraordinario. Chocolate de origen único, Ecuador</title>
+  <meta name="description" content="Chocolate ecuatoriano de origen único, hecho a mano por maestros chocolateros. Barras de 80 g con envío en 24 h. Programa HORECA y regalos corporativos.">
+  <meta property="og:title" content="Rights Chocolate — Lo correcto sabe extraordinario.">
+  <meta property="og:description" content="Chocolate de origen único, Ecuador. Envío en 24 h. HORECA y regalos corporativos.">
+  <meta property="og:image" content="../assets/video/fountain-poster.jpg">
+  <meta name="theme-color" content="#1F1008">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F1008'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='700' text-anchor='middle' fill='%23C9A24A'%3ER%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<!-- Barra de servicio: promesas reales, no ruido -->
+<div class="promo" id="promo">
+  <span>Envío gratis desde $25 en Ecuador</span>
+  <span class="promo__sep">·</span>
+  <span id="promo-cutoff">Pide antes de las 14:00 y sale hoy en Guayaquil</span>
+  <span class="promo__sep">·</span>
+  <span id="promo-lote">Lote 09 · quedan 140 barras</span>
+</div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="index.html" aria-label="Rights Chocolate"><span class="nav__word">Rights</span><span class="nav__dot">.</span></a>
+  <nav class="nav__links" aria-label="Principal">
+    <a href="#tienda">Tienda</a>
+    <a href="#historia">Origen</a>
+    <a href="#maestros">Maestros</a>
+    <a href="horeca.html">HORECA</a>
+    <a href="#regalos">Regalos</a>
+  </nav>
+  <div class="nav__right">
+    <a class="nav__icon" id="wa-link" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+    </a>
+    <button class="nav__cart" id="cart-btn" type="button" aria-label="Carrito">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M6 7h12l1.2 12H4.8L6 7zm3 0V5.5a3 3 0 0 1 6 0V7"/></svg>
+      <span class="nav__count" id="cart-count">0</span>
+    </button>
+    <a class="btn btn--gold btn--sm" href="#tienda">Comprar</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== HERO: WOW + dos caminos + lote real ===== -->
+<section class="hero" id="top">
+  <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="../assets/video/fountain-poster.jpg" src="../assets/video/fountain-loop.mp4"></video>
+  <div class="hero__shade"></div>
+  <div class="hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow">Chocolate de origen único · Guayaquil, Ecuador</p>
+      <h1 class="hero__title">Lo correcto sabe extraordinario<span class="gold">.</span></h1>
+      <p class="hero__echo">What’s done right, tastes extraordinary.</p>
+      <p class="hero__lead">Cacao Arriba Nacional, hecho a mano por maestros chocolateros. Barras de 80 g que llegan a tu casa mañana.</p>
+      <div class="hero__cta">
+        <a class="btn btn--gold" href="#tienda">Comprar barras</a>
+        <a class="btn btn--ghost" href="horeca.html">Para mi negocio</a>
+      </div>
+    </div>
+    <aside class="lote" aria-label="Lote en curso">
+      <p class="lote__tag"><i></i> Lote 09 · en curso</p>
+      <h2 class="lote__name">Oscuro 70 %</h2>
+      <p class="lote__sub">Arriba Nacional · tostado el 2 de septiembre · templado a mano</p>
+      <div class="lote__bar"><i id="lote-bar"></i></div>
+      <p class="lote__count"><strong id="lote-left">140</strong> de <span id="lote-total">300</span> barras disponibles</p>
+      <p class="lote__note">Cuando se acaba, se acaba. El lote 10 sale en octubre.</p>
+      <button class="btn btn--gold btn--block" type="button" data-add="70">Agregar Oscuro 70 % · $6.50</button>
+    </aside>
+  </div>
+  <ul class="trust" aria-label="Por qué confiar">
+    <li><strong>30+</strong> premios internacionales</li>
+    <li><strong>24 h</strong> envío en Guayaquil</li>
+    <li><strong>100 %</strong> hecho por maestros</li>
+    <li><strong>WhatsApp</strong> o tarjeta, tú eliges</li>
+  </ul>
+</section>
+
+<!-- ===== TIENDA RÁPIDA: comprar en 3 clics ===== -->
+<section class="shop section" id="tienda">
+  <div class="section__head">
+    <p class="eyebrow">Tienda</p>
+    <h2 class="h2">Elige tu barra.</h2>
+    <p class="lead">Tres barras, un solo estándar. Envío gratis desde $25. Pide antes de las 14:00 y sale hoy.</p>
+  </div>
+  <div class="products">
+    <article class="product" data-id="70">
+      <div class="product__stage"><canvas class="product__canvas" data-variant="dark" aria-hidden="true"></canvas><span class="badge badge--hot">Lote 09 · quedan 140</span></div>
+      <div class="product__body">
+        <p class="product__pct">70 % · Arriba Nacional</p>
+        <h3 class="product__name">Oscuro</h3>
+        <p class="product__desc">Cacao y azúcar de caña. Nada más. Notas de flor de azahar y nuez.</p>
+        <div class="product__row"><span class="product__price">$6.50</span><button class="btn btn--dark btn--sm" type="button" data-add="70">Agregar</button></div>
+      </div>
+    </article>
+    <article class="product" data-id="55">
+      <div class="product__stage"><canvas class="product__canvas" data-variant="milk" aria-hidden="true"></canvas></div>
+      <div class="product__body">
+        <p class="product__pct">55 % · Leche entera</p>
+        <h3 class="product__name">Leche</h3>
+        <p class="product__desc">Redondo, sin empalagar. El que convierte a los que “no comen chocolate oscuro”.</p>
+        <div class="product__row"><span class="product__price">$6.50</span><button class="btn btn--dark btn--sm" type="button" data-add="55">Agregar</button></div>
+      </div>
+    </article>
+    <article class="product" data-id="85">
+      <div class="product__stage"><canvas class="product__canvas" data-variant="intense" aria-hidden="true"></canvas><span class="badge">Últimas 38</span></div>
+      <div class="product__body">
+        <p class="product__pct">85 % · Intenso</p>
+        <h3 class="product__name">Intenso</h3>
+        <p class="product__desc">Para quien ya sabe lo que busca. Largo, seco, sin amargor barato.</p>
+        <div class="product__row"><span class="product__price">$7.00</span><button class="btn btn--dark btn--sm" type="button" data-add="85">Agregar</button></div>
+      </div>
+    </article>
+    <article class="product product--box" data-id="box">
+      <div class="product__stage product__stage--box">
+        <div class="boxart"><i class="boxart__bar boxart__bar--1"></i><i class="boxart__bar boxart__bar--2"></i><i class="boxart__bar boxart__bar--3"></i></div>
+        <span class="badge badge--gold">La más pedida · −12 %</span>
+      </div>
+      <div class="product__body">
+        <p class="product__pct">Caja Descubrimiento · 3 barras</p>
+        <h3 class="product__name">Las tres</h3>
+        <p class="product__desc">Oscuro, Leche e Intenso en caja de regalo. Envío gratis incluido.</p>
+        <div class="product__row"><span class="product__price">$17.50 <s>$20.00</s></span><button class="btn btn--dark btn--sm" type="button" data-add="box">Agregar</button></div>
+      </div>
+    </article>
+  </div>
+  <p class="shop__note">Barras de 80 g · Precios en USD · Pago por WhatsApp o tarjeta · <a href="#faq">Envíos a todo Ecuador</a></p>
+</section>
+
+<!-- ===== POR QUÉ RIGHTS: tres promesas ===== -->
+<section class="pillars section section--ivory">
+  <div class="pillars__grid">
+    <div class="pillar"><span class="pillar__num">01</span><h3>Origen único</h3><p>Cacao Arriba Nacional de Ecuador, fino de aroma. Un solo origen por barra, nunca mezclas anónimas.</p></div>
+    <div class="pillar"><span class="pillar__num">02</span><h3>Hecho por maestros</h3><p>Nuestro taller está en manos de maestros chocolateros con discapacidad. No es caridad: es el estándar de la casa.</p></div>
+    <div class="pillar"><span class="pillar__num">03</span><h3>Lo correcto</h3><p>Cinco días de fermentación, tostado bajo, conchado largo y templado a mano a 31 °C. Ni uno más.</p></div>
+  </div>
+</section>
+
+<!-- ===== HISTORIA EN 3 CAPÍTULOS ===== -->
+<section class="story" id="historia">
+  <div class="section__head section__head--center">
+    <p class="eyebrow">La historia</p>
+    <h2 class="h2">Del árbol a tu mesa, en tres capítulos.</h2>
+  </div>
+  <div class="chapters">
+    <a class="chapter" href="#historia">
+      <video class="lazy-video" muted loop playsinline preload="none" poster="../assets/video/origin-poster.jpg" data-src="../assets/video/origin-loop-720.mp4"></video>
+      <div class="chapter__shade"></div>
+      <div class="chapter__copy"><span class="chapter__num">Capítulo 1 · Origen</span><h3>Nace bajo el bosque de Ecuador.</h3><p>Mazorcas Arriba Nacional, cosechadas a mano y fermentadas cinco días.</p><span class="link-arrow">Conocer el origen</span></div>
+    </a>
+    <a class="chapter" href="#maestros" id="maestros">
+      <video class="lazy-video" muted loop playsinline preload="none" poster="../assets/video/hands-poster.jpg" data-src="../assets/video/hands-loop-720.mp4"></video>
+      <div class="chapter__shade"></div>
+      <div class="chapter__copy"><span class="chapter__num">Capítulo 2 · Manos</span><h3>Hecho por maestros. Sin excepción.</h3><p>Cada barra pasa por manos que dominan su oficio. La inclusión aquí es maestría.</p><span class="link-arrow">Conocer el taller</span></div>
+    </a>
+    <a class="chapter" href="#tienda">
+      <video class="lazy-video" muted loop playsinline preload="none" poster="../assets/video/fountain-poster.jpg" data-src="../assets/video/fountain-loop-720.mp4"></video>
+      <div class="chapter__shade"></div>
+      <div class="chapter__copy"><span class="chapter__num">Capítulo 3 · Lo correcto</span><h3>Treinta y un grados. Ni uno más.</h3><p>Templar es ordenar los cristales del cacao hasta que brillen y chasqueen.</p><span class="link-arrow">Probar el resultado</span></div>
+    </a>
+  </div>
+  <p class="media-credit">Video: Mixkit · Kokopods / Bhat‘n’Bhat, CC BY 3.0</p>
+</section>
+
+<!-- ===== PREMIOS Y PRUEBA SOCIAL ===== -->
+<section class="proof section section--ivory" id="premios">
+  <div class="proof__grid">
+    <div class="proof__num"><strong>30<span class="gold">+</span></strong><span>premios internacionales<br>en concursos de chocolate</span></div>
+    <div class="proof__awards" aria-label="Premios">
+      <div class="award"><span class="award__medal">Oro</span><span class="award__name">Premio · Año</span><span class="award__cat">Barra oscuro 70 %</span></div>
+      <div class="award"><span class="award__medal">Plata</span><span class="award__name">Premio · Año</span><span class="award__cat">Barra leche 55 %</span></div>
+      <div class="award"><span class="award__medal">Oro</span><span class="award__name">Premio · Año</span><span class="award__cat">Barra intenso 85 %</span></div>
+      <div class="award"><span class="award__medal">Bronce</span><span class="award__name">Premio · Año</span><span class="award__cat">Origen Ecuador</span></div>
+    </div>
+  </div>
+  <div class="reviews">
+    <figure class="review"><blockquote>“Se lo llevé a un chef francés. Preguntó de qué hacienda era. Ahí entendí.”</blockquote><figcaption>Cliente en Guayaquil · <em>reseña de ejemplo</em></figcaption></figure>
+    <figure class="review"><blockquote>“Pedí a las 11, llegó a las 4. La caja es de regalo de verdad, no de cartón de zapato.”</blockquote><figcaption>Cliente en Samborondón · <em>reseña de ejemplo</em></figcaption></figure>
+    <figure class="review"><blockquote>“El 85 % es el único que no me sabe a ceniza. Ya va en la carta del restaurante.”</blockquote><figcaption>Chef · cliente HORECA · <em>reseña de ejemplo</em></figcaption></figure>
+  </div>
+</section>
+
+<!-- ===== HORECA ===== -->
+<section class="horeca section" id="horeca">
+  <div class="horeca__grid">
+    <div>
+      <p class="eyebrow">Para hoteles, cafés y restaurantes</p>
+      <h2 class="h2">Rights en tu carta.</h2>
+      <p class="lead">Formatos para postre y café, tabletas con tu marca, precios por volumen y muestras sin costo para chefs. Entrega semanal en Guayaquil y Quito.</p>
+      <div class="hero__cta"><a class="btn btn--gold" href="horeca.html">Solicitar muestras</a><a class="btn btn--ghost" id="wa-b2b" href="#" target="_blank" rel="noopener">WhatsApp B2B</a></div>
+    </div>
+    <div class="tiles">
+      <a class="tile" href="horeca.html#hoteles"><strong>Hoteles</strong><span>Amenities y minibar con tu logo</span></a>
+      <a class="tile" href="horeca.html#cafes"><strong>Cafés</strong><span>Mini 10 g para acompañar el espresso</span></a>
+      <a class="tile" href="horeca.html#restaurantes"><strong>Restaurantes</strong><span>Cobertura 1 kg y gotas para postre</span></a>
+      <a class="tile" href="horeca.html#corporativo"><strong>Corporativo</strong><span>Cajas de regalo personalizadas</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== URGENCIA ESTACIONAL: fecha real ===== -->
+<section class="season" id="regalos">
+  <div class="season__inner">
+    <div>
+      <p class="eyebrow eyebrow--dark">Regalos corporativos 2026</p>
+      <h2 class="h2">Reserva antes del 30 de noviembre.</h2>
+      <p class="lead lead--dark">Cajas personalizadas con tu logo para clientes y equipo. Producimos por orden de reserva: los cupos de diciembre se cierran cuando se llenan.</p>
+    </div>
+    <div class="season__clock">
+      <div class="clock"><strong id="days-left">—</strong><span>días para reservar</span></div>
+      <a class="btn btn--dark" href="horeca.html#corporativo">Reservar cupo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLUB ===== -->
+<section class="club section section--ivory">
+  <div class="club__inner">
+    <div>
+      <p class="eyebrow">Club Rights</p>
+      <h2 class="h2">La barra del mes, en tu puerta.</h2>
+      <p class="lead">Cada mes, una barra del lote nuevo antes que nadie. 10 % menos, envío gratis, cancela cuando quieras.</p>
+    </div>
+    <div class="club__card">
+      <p class="club__price">$5.85<span>/mes</span></p>
+      <ul><li>Barra del lote nuevo cada mes</li><li>Acceso anticipado a ediciones limitadas</li><li>Envío gratis en Ecuador</li></ul>
+      <button class="btn btn--dark btn--block" type="button" data-add="club">Unirme al club</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="news section">
+  <form class="news__form" id="news-form" novalidate>
+    <div><p class="eyebrow">Boletín</p><h2 class="h3">Avisamos cuando sale un lote. Nada más.</h2></div>
+    <div class="news__row"><label class="sr-only" for="news-email">Correo</label><input id="news-email" type="email" placeholder="tu@correo.com" required autocomplete="email"><button class="btn btn--gold" type="submit">Avisarme</button></div>
+    <p class="form__msg" id="news-msg" aria-live="polite"></p>
+  </form>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__brand"><span class="nav__word">Rights</span><span class="nav__dot">.</span><p>Chocolate de origen único · Guayaquil, Ecuador</p><p class="footer__slogan">Lo correcto sabe extraordinario.</p></div>
+  <div class="footer__cols">
+    <div><h4>Tienda</h4><a href="#tienda">Oscuro 70 %</a><a href="#tienda">Leche 55 %</a><a href="#tienda">Intenso 85 %</a><a href="#tienda">Caja Descubrimiento</a><a href="#regalos">Club Rights</a></div>
+    <div><h4>Rights</h4><a href="#historia">Origen</a><a href="#maestros">Maestros</a><a href="#historia">Proceso</a><a href="#premios">Premios</a></div>
+    <div><h4>Negocios</h4><a href="horeca.html">HORECA</a><a href="horeca.html#corporativo">Regalos corporativos</a><a href="horeca.html#formatos">Formatos y precios</a></div>
+    <div><h4>Ayuda</h4><a href="#faq" id="faq">Envíos y devoluciones</a><a href="#faq">Preguntas frecuentes</a><a href="#" id="wa-foot">WhatsApp</a><a href="../assets/video/CREDITS.md">Créditos de video</a></div>
+  </div>
+  <p class="footer__legal">© <span id="year"></span> Rights Foods S.A. · Mockup de rediseño — copy, cifras, premios y reseñas son provisionales.</p>
+</footer>
+
+<!-- ===== CARRITO ===== -->
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer__bg" id="drawer-bg"></div>
+  <aside class="drawer__panel" role="dialog" aria-label="Carrito">
+    <header class="drawer__head"><h3>Tu carrito</h3><button class="drawer__close" id="drawer-close" type="button" aria-label="Cerrar">×</button></header>
+    <div class="ship"><p id="ship-msg">Te faltan $25.00 para envío gratis</p><div class="ship__bar"><i id="ship-bar"></i></div></div>
+    <div class="drawer__items" id="cart-items"></div>
+    <footer class="drawer__foot">
+      <p class="drawer__total">Subtotal <strong id="cart-total">$0.00</strong></p>
+      <p class="drawer__cutoff" id="cart-cutoff"></p>
+      <a class="btn btn--gold btn--block" id="checkout-wa" href="#" target="_blank" rel="noopener">Pagar por WhatsApp</a>
+      <a class="btn btn--ghost btn--block" id="checkout-card" href="#">Pagar con tarjeta</a>
+    </footer>
+  </aside>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div id="concierge-widget" class="rita">
+  <button class="rita__bubble" id="rita-btn" type="button" aria-expanded="false"><span class="rita__r">R</span><span class="rita__label">Habla con Rita</span></button>
+  <div class="rita__panel" id="rita-panel" hidden><p class="rita__title">Rita</p><p class="rita__text">Concierge de Rights. Pronto te ayudo a elegir tu barra, rastrear tu pedido y armar pedidos para tu negocio.</p></div>
+</div>
+
+<script src="vendor/three.min.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
