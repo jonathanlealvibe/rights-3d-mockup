@@ -15,7 +15,7 @@ var WIDGET_SCRIPT = '';      // AI concierge embed script URL (goes into #concie
     es: {
       'nav.origin': 'Origen', 'nav.process': 'Proceso', 'nav.shop': 'Chocolates', 'nav.wholesale': 'Mayoristas', 'nav.buy': 'Comprar',
       'hero.eyebrow': 'Chocolate de origen único · Ecuador',
-      'hero.slogan': 'Lo correcto sabe extraordinario.',
+      'hero.title': 'Lo correcto sabe extraordinario.',
       'hero.echo': 'What’s done right, tastes extraordinary.',
       'hero.cta1': 'Comprar chocolate', 'hero.cta2': 'Conocer el origen', 'hero.cue': 'Desliza',
       'beat0.label': '01 — Origen', 'beat0.title': 'Nace en la sombra del árbol.',
@@ -24,7 +24,7 @@ var WIDGET_SCRIPT = '';      // AI concierge embed script URL (goes into #concie
       'beat1.text': 'Templar es ordenar los cristales del cacao hasta que brillen y chasqueen. Es paciencia convertida en textura.',
       'beat2.label': '03 — Manos', 'beat2.title': 'Hecho por maestros. Sin excepción.',
       'beat2.text': 'Cada barra pasa por manos que dominan su oficio. La inclusión aquí no es un gesto: es maestría.',
-      'beat3.label': '04 — Made Right.', 'beat3.title': 'Lo correcto sabe extraordinario.',
+      'beat3.label': '04 — Lo correcto', 'beat3.title': 'Lo correcto sabe extraordinario.',
       'beat3.text': 'Rómpela. Escucha el chasquido. Así suena hacer las cosas bien.',
       'origin.eyebrow': 'Origen', 'origin.title': 'Ecuador, donde el cacao nació con nombre.',
       'origin.lead': 'Trabajamos con cacao Nacional “Arriba”, la variedad fino de aroma que solo crece bien aquí. Lo compramos directo, lo fermentamos con calma y lo tostamos bajo.',
@@ -53,7 +53,7 @@ var WIDGET_SCRIPT = '';      // AI concierge embed script URL (goes into #concie
     en: {
       'nav.origin': 'Origin', 'nav.process': 'Process', 'nav.shop': 'Chocolates', 'nav.wholesale': 'Wholesale', 'nav.buy': 'Shop',
       'hero.eyebrow': 'Single-origin chocolate · Ecuador',
-      'hero.slogan': 'What’s done right, tastes extraordinary.',
+      'hero.title': 'What’s done right, tastes extraordinary.',
       'hero.echo': 'Lo correcto sabe extraordinario.',
       'hero.cta1': 'Shop chocolate', 'hero.cta2': 'Discover the origin', 'hero.cue': 'Scroll',
       'beat0.label': '01 — Origin', 'beat0.title': 'Born in the shade of the tree.',
@@ -62,7 +62,7 @@ var WIDGET_SCRIPT = '';      // AI concierge embed script URL (goes into #concie
       'beat1.text': 'Tempering is ordering the cacao crystals until they shine and snap. It is patience turned into texture.',
       'beat2.label': '03 — Hands', 'beat2.title': 'Made by masters. No exceptions.',
       'beat2.text': 'Every bar passes through hands that own their craft. Inclusion here is not a gesture: it is mastery.',
-      'beat3.label': '04 — Made Right.', 'beat3.title': 'What’s done right, tastes extraordinary.',
+      'beat3.label': '04 — Done right', 'beat3.title': 'What’s done right, tastes extraordinary.',
       'beat3.text': 'Break it. Listen to the snap. That is what doing things right sounds like.',
       'origin.eyebrow': 'Origin', 'origin.title': 'Ecuador, where cacao was born with a name.',
       'origin.lead': 'We work with Nacional “Arriba” cacao, the fine-aroma variety that only thrives here. We buy it direct, ferment it slowly and roast it low.',
@@ -95,12 +95,14 @@ var WIDGET_SCRIPT = '';      // AI concierge embed script URL (goes into #concie
     document.documentElement.lang = lang;
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var k = el.getAttribute('data-i18n');
-      if (T[lang][k] != null) el.textContent = T[lang][k];
+      if (T[lang][k] == null) return;
+      if (k === 'hero.title') { var t = T[lang][k].replace(/\.$/, ''); el.textContent = t; var dot = document.createElement('span'); dot.className = 'gold'; dot.textContent = '.'; el.appendChild(dot); }
+      else el.textContent = T[lang][k];
     });
     document.querySelectorAll('.lang [data-lang]').forEach(function (s) { s.classList.toggle('is-on', s.dataset.lang === lang); });
     document.title = lang === 'en'
-      ? 'Rights Chocolate — Made Right. Single-origin chocolate, Ecuador'
-      : 'Rights Chocolate — Made Right. Chocolate de origen único, Ecuador';
+      ? 'Rights Chocolate — What’s done right, tastes extraordinary. Single-origin chocolate, Ecuador'
+      : 'Rights Chocolate — Lo correcto sabe extraordinario. Chocolate de origen único, Ecuador';
     var url = new URL(window.location.href);
     if (lang === 'en') url.searchParams.set('lang', 'en'); else url.searchParams.delete('lang');
     history.replaceState(null, '', url.toString());

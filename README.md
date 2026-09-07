@@ -9,8 +9,8 @@ cd rights-3d-mockup && npx http-server -p 8765 -c-1
 Then visit http://localhost:8765 (add `?lang=en` for English).
 
 ## What it is
-- **Hero**: looping liquid-chocolate video, "Made Right." lockup, slogan, two CTAs.
-- **3D story (pinned, 520 vh of scroll)**: a procedural Three.js chocolate bar. Scrolling drives four beats — cacao beans orbit (Origen), the squares fly in and assemble on the slab (Templado), the bar presents itself under a gold rim light (Manos), then snaps in two and a square breaks toward the viewer (Made Right.). Mouse parallax on desktop. Static single frame under `prefers-reduced-motion`.
+- **Hero**: looping liquid-chocolate video, the slogan as headline («Lo correcto sabe extraordinario.» / "What’s done right, tastes extraordinary."), two CTAs.
+- **3D story (pinned, 520 vh of scroll)**: a procedural Three.js chocolate bar. Scrolling drives four beats — cacao beans orbit (Origen), the squares fly in and assemble on the slab (Templado), the bar presents itself under a gold rim light (Manos), then snaps in two and a square breaks toward the viewer (Lo correcto). Mouse parallax on desktop. Static single frame under `prefers-reduced-motion`.
 - **Origen**: real cacao footage (pods on the tree, open pod, dried beans) with three facts.
 - **Proceso (scroll-scrub)**: pinned video scrubbed by scroll — melanger, pour on marble, hand tempering — with three copy beats.
 - **Chocolates**: three bars, each a live 3D render (dark / milk / intense) that rotates and speeds up on hover.
