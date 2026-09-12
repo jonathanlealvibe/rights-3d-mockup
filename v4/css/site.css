@@ -598,3 +598,16 @@ body.page-cart .drawer,body.page-checkout .drawer,body.page-thanks .drawer{displ
 @media (prefers-reduced-motion:reduce){.hero__fig{opacity:1;transform:none;animation:none}}
 
 @media (min-width:900px){.hero--photo .hero__img{object-position:70% 42%}}
+
+/* ===== v4 · hero de mesa: producto, cacao e ingredientes reales ===== */
+.hero--mesa .hero__shade{background:
+  linear-gradient(100deg,rgba(12,20,12,.93) 0%,rgba(12,20,12,.80) 32%,rgba(12,20,12,.34) 56%,rgba(12,20,12,.10) 78%),
+  linear-gradient(to top,rgba(12,18,12,.88),transparent 42%)}
+.hero--mesa .hero__img{animation:heroZoom 26s ease-in-out infinite alternate;transform-origin:62% 48%}
+@keyframes heroZoom{from{transform:scale(1.03)}to{transform:scale(1.11)}}
+.hero--mesa .hero__copy{max-width:31rem}
+@media (max-width:900px){
+  .hero--mesa .hero__shade{background:linear-gradient(to top,rgba(12,18,12,.96) 0%,rgba(12,18,12,.86) 40%,rgba(12,18,12,.74) 66%,rgba(12,18,12,.60) 100%)}
+  .hero--mesa .hero__img{animation:none}
+}
+@media (prefers-reduced-motion:reduce){.hero--mesa .hero__img{animation:none}}
