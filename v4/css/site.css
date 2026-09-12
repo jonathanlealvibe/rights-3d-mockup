@@ -620,22 +620,41 @@ body.page-cart .drawer,body.page-checkout .drawer,body.page-thanks .drawer{displ
 .footer__logo{width:92px;height:92px;display:block;margin-bottom:.9rem}
 @media (max-width:900px){.footer__logo{width:76px;height:76px}}
 
-/* ===== v4 · hero en tres planos: fotos reales que se funden ===== */
-.hero__film{position:absolute;inset:0;z-index:-2;overflow:hidden}
-.hero__frame{position:absolute;inset:0;display:block;opacity:0;animation:heroFade 27s linear infinite}
+/* ===== v4 · portada: película de cuatro planos reales ===== */
+.hero__film{position:absolute;inset:0;z-index:-2;overflow:hidden;background:#0A060E}
+.hero__frame{position:absolute;inset:0;display:block;opacity:0;animation:heroFade 36s linear infinite}
 .hero__frame .hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-  animation:heroPush 27s ease-in-out infinite;transform-origin:64% 48%}
+  animation:heroPush 36s ease-in-out infinite;transform-origin:62% 50%}
 .hero__frame.is-1,.hero__frame.is-1 .hero__img{animation-delay:0s}
 .hero__frame.is-2,.hero__frame.is-2 .hero__img{animation-delay:9s}
 .hero__frame.is-3,.hero__frame.is-3 .hero__img{animation-delay:18s}
+.hero__frame.is-4,.hero__frame.is-4 .hero__img{animation-delay:27s}
 .hero__frame.is-1{opacity:1}
-@keyframes heroFade{0%{opacity:0}3%{opacity:1}30%{opacity:1}36%{opacity:0}100%{opacity:0}}
-@keyframes heroPush{0%{transform:scale(1.02)}36%{transform:scale(1.11)}100%{transform:scale(1.11)}}
+@keyframes heroFade{0%{opacity:0}2%{opacity:1}23%{opacity:1}27%{opacity:0}100%{opacity:0}}
+@keyframes heroPush{0%{transform:scale(1.02)}27%{transform:scale(1.10)}100%{transform:scale(1.10)}}
+
+/* rótulo que nombra cada plano */
+.hero__cards{position:absolute;right:var(--pad);bottom:10.5rem;z-index:3;text-align:right;pointer-events:none}
+.hero__card{position:absolute;right:0;bottom:0;display:block;white-space:nowrap;opacity:0;animation:heroFade 36s linear infinite}
+.hero__card.is-1{animation-delay:0s}.hero__card.is-2{animation-delay:9s}
+.hero__card.is-3{animation-delay:18s}.hero__card.is-4{animation-delay:27s}
+.hero__card::before{content:"";display:block;width:34px;height:1px;background:var(--gold);margin:0 0 .55rem auto;opacity:.8}
+.hero__card b{display:block;font-family:var(--serif);font-weight:400;font-size:1.65rem;color:var(--ivory);letter-spacing:-.01em;text-shadow:0 2px 18px rgba(10,6,14,.8)}
+.hero__card i{display:block;font-style:normal;font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-2);margin-top:.3rem;text-shadow:0 2px 14px rgba(10,6,14,.9)}
+@media (max-width:1100px){.hero__cards{display:none}}
 @media (prefers-reduced-motion:reduce){
-  .hero__frame,.hero__frame .hero__img{animation:none}
-  .hero__frame.is-2,.hero__frame.is-3{display:none}
-  .hero__frame.is-1{opacity:1}
+  .hero__frame,.hero__frame .hero__img,.hero__card{animation:none}
+  .hero__frame.is-2,.hero__frame.is-3,.hero__frame.is-4,.hero__card.is-2,.hero__card.is-3,.hero__card.is-4{display:none}
+  .hero__frame.is-1,.hero__card.is-1{opacity:1}
 }
 /* el logotipo real ya lleva la marca: el punto se pega a la palabra */
 .nav__brand{gap:.55rem}
 .nav__dot{margin-left:-.5rem}
+
+/* ===== v4 · la marca del menú es solo el logotipo ===== */
+.nav__brand{gap:0;flex:none;border-radius:50%;transition:transform .35s var(--ease),opacity .3s}
+.nav__brand:hover{transform:scale(1.05)}
+.nav__brand:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.nav__logo{width:56px;height:56px;flex:none;display:block}
+.nav{padding-top:.5rem;padding-bottom:.5rem}
+@media (max-width:640px){.nav__logo{width:46px;height:46px}}
