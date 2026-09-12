@@ -63,7 +63,7 @@ p{margin:0}ul,ol{margin:0;padding:0;list-style:none}button{font:inherit}
 /* Barra de servicio */
 .promo{background:var(--cacao-2);color:var(--ivory-70);font-size:.74rem;letter-spacing:.06em;text-align:center;padding:.5rem var(--pad);display:flex;justify-content:center;gap:.7rem;flex-wrap:wrap}
 .promo__sep{color:var(--gold)}
-@media (max-width:700px){.promo span:not([data-cutoff]):not(.promo__sep){display:none}.promo .promo__sep{display:none}}
+
 
 /* Nav */
 .nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem var(--pad);background:rgba(31,16,8,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:var(--ivory);border-bottom:1px solid rgba(201,162,74,.18)}
@@ -570,10 +570,13 @@ body.page-cart .drawer,body.page-checkout .drawer,body.page-thanks .drawer{displ
 /* ===== v4 · correcciones de QA (accesibilidad y móvil) ===== */
 /* 1. Nav en móvil: el botón Comprar empujaba la hamburguesa fuera de pantalla */
 @media (max-width:640px){
-  .nav .btn--gold.btn--sm{display:none}
-  .nav__right{gap:.45rem}
-  .nav{gap:.5rem;padding-left:16px;padding-right:16px}
+  .nav__right{gap:.4rem}
+  .nav{gap:.4rem;padding-left:14px;padding-right:14px}
+  .nav .btn--gold.btn--sm{padding:.5rem .8rem;font-size:.74rem}
+  .nav__icon{width:32px;height:32px}
+  .lang{font-size:.7rem;gap:.2rem}
 }
+@media (max-width:400px){.nav__logo{width:40px;height:40px}.nav .btn--gold.btn--sm{padding:.46rem .66rem;font-size:.7rem}}
 /* 2. Eyebrow del hero sobre foto: contraste AA */
 .hero .eyebrow{color:var(--gold-2)}
 @media (max-width:900px){
@@ -594,7 +597,7 @@ body.page-cart .drawer,body.page-checkout .drawer,body.page-thanks .drawer{displ
   background:linear-gradient(to top,rgba(21,10,4,.92),transparent);color:var(--ivory)}
 .hero__fig-k{display:block;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2)}
 .hero__fig b{display:block;font-family:var(--serif);font-weight:400;font-size:1.05rem;margin-top:.22rem}
-@media (max-width:900px){.hero__fig{display:none}}
+
 @media (prefers-reduced-motion:reduce){.hero__fig{opacity:1;transform:none;animation:none}}
 
 @media (min-width:900px){.hero--photo .hero__img{object-position:70% 42%}}
@@ -641,7 +644,7 @@ body.page-cart .drawer,body.page-checkout .drawer,body.page-thanks .drawer{displ
 .hero__card::before{content:"";display:block;width:34px;height:1px;background:var(--gold);margin:0 0 .55rem auto;opacity:.8}
 .hero__card b{display:block;font-family:var(--serif);font-weight:400;font-size:1.65rem;color:var(--ivory);letter-spacing:-.01em;text-shadow:0 2px 18px rgba(10,6,14,.8)}
 .hero__card i{display:block;font-style:normal;font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-2);margin-top:.3rem;text-shadow:0 2px 14px rgba(10,6,14,.9)}
-@media (max-width:1100px){.hero__cards{display:none}}
+
 @media (prefers-reduced-motion:reduce){
   .hero__frame,.hero__frame .hero__img,.hero__card{animation:none}
   .hero__frame.is-2,.hero__frame.is-3,.hero__frame.is-4,.hero__card.is-2,.hero__card.is-3,.hero__card.is-4{display:none}
@@ -658,3 +661,33 @@ body.page-cart .drawer,body.page-checkout .drawer,body.page-thanks .drawer{displ
 .nav__logo{width:56px;height:56px;flex:none;display:block}
 .nav{padding-top:.5rem;padding-bottom:.5rem}
 @media (max-width:640px){.nav__logo{width:46px;height:46px}}
+
+/* ===== v4 · en el teléfono se ve todo ===== */
+/* La franja de avisos rota los tres mensajes en vez de esconder dos */
+@keyframes promoCycle{0%{opacity:0}2%{opacity:1}33%{opacity:1}37%{opacity:0}100%{opacity:0}}
+@media (max-width:700px){
+  .promo{display:block;position:relative;height:2.15rem;padding:.5rem 14px 0;overflow:hidden;text-align:center}
+  .promo .promo__sep{display:none}
+  .promo>span:not(.promo__sep){display:block;position:absolute;left:14px;right:14px;top:.5rem;opacity:0;
+    animation:promoCycle 13.5s linear infinite;white-space:normal;line-height:1.22}
+  .promo>span:nth-child(1){animation-delay:0s}
+  .promo>span:nth-child(3){animation-delay:4.5s}
+  .promo>span:nth-child(5){animation-delay:9s}
+}
+/* El rótulo de cada plano también en el teléfono, abajo a la izquierda */
+@media (max-width:1100px){
+  .hero__grid{order:1}
+  .hero__cards{position:relative;order:2;left:auto;right:auto;bottom:auto;height:3.3rem;
+    padding:0 var(--pad);margin-top:-.4rem;text-align:left}
+  .hero__card{position:absolute;left:var(--pad);right:auto;bottom:0}
+  .hero__card::before{margin:0 auto .38rem 0}
+  .hero__card b{font-size:1.2rem}
+  .hero__card i{font-size:.6rem;letter-spacing:.13em}
+  .trust{order:3}
+}
+/* La etiqueta del concierge no se esconde */
+@media (max-width:600px){.rita__label{display:inline;font-size:.78rem;padding-right:.65rem}}
+@media (prefers-reduced-motion:reduce) and (max-width:700px){
+  .promo{height:auto;padding-bottom:.5rem}
+  .promo>span:not(.promo__sep){animation:none;position:static;opacity:1;margin-bottom:.15rem}
+}
