@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /v4/carrito.html
+Disallow: /v4/checkout.html
+Disallow: /v4/pedido-confirmado.html
+Sitemap: https://jonathanlealvibe.github.io/rights-3d-mockup/v4/sitemap.xml

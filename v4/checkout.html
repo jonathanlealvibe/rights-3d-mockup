@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-en="Checkout — Rights Chocolate">Finalizar pedido — Rights Chocolate</title>
+  <meta name="description" content="Datos de envío, factura electrónica SRI y forma de pago.">
+  <meta property="og:title" content="Finalizar pedido — Rights Chocolate">
+  <meta property="og:description" content="Datos de envío, factura electrónica SRI y forma de pago.">
+  <meta property="og:image" content="img/hero-pod.jpg">
+  <meta name="theme-color" content="#1F1008">
+  <link rel="alternate" hreflang="es" href="checkout.html"><link rel="alternate" hreflang="en" href="checkout.html?lang=en">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F1008'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='700' text-anchor='middle' fill='%23C9A24A'%3ER.%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body class="page-checkout">
+
+<div class="promo">
+  <span data-en="Free shipping from $30 in Ecuador">Envío gratis desde $30 en Ecuador</span>
+  <span class="promo__sep">·</span>
+  <span data-cutoff>Pide antes de las 14:00 y sale hoy desde Quito</span>
+  <span class="promo__sep">·</span>
+  <span data-en="Every bar supports the labour inclusion of people with disabilities">Cada barra apoya la inclusión laboral de personas con discapacidad</span>
+</div>
+<header class="nav" id="nav">
+  <a class="nav__brand" href="index.html" aria-label="Rights Chocolate"><span class="nav__word">Rights</span><span class="nav__dot">.</span></a>
+  <nav class="nav__links" aria-label="Principal"><div class="nav__item"><a href="chocolates.html" aria-current="page" data-en="Shop">Tienda</a><div class="nav__sub"><a href="chocolates.html#barras" data-en="Bars">Barras</a><a href="chocolates.html#coberturas" data-en="Couvertures">Coberturas</a><a href="chocolates.html#snacks" data-en="Cacao snacks">Snacks de cacao</a><a href="chocolates.html#mini" data-en="Mini bars">Minibarras</a></div></div><div class="nav__item"><a href="coberturas.html" data-en="Couvertures">Coberturas</a></div><div class="nav__item"><a href="origen.html" data-en="Origin">Origen</a></div><div class="nav__item"><a href="inclusion.html" data-en="Inclusion">Inclusión</a></div><div class="nav__item"><a href="premios.html" data-en="Awards">Premios</a></div><div class="nav__item"><a href="regalos.html" data-en="Gifts">Regalos</a><div class="nav__sub"><a href="regalos.html" data-en="Gift what is right">Regala lo correcto</a><a href="navidad.html" data-en="Corporate Christmas">Navidad corporativa</a></div></div><div class="nav__item"><a href="empresas.html" data-en="Business">Empresas</a><div class="nav__sub"><a href="empresas.html#corporativo" data-en="Corporate gifts">Regalos corporativos</a><a href="empresas.html#horeca" data-en="HORECA · chefs">HORECA · chefs</a><a href="creation-lab.html" data-en="Creation Lab">Creation Lab</a></div></div><div class="nav__item"><a href="contacto.html" data-en="Contact">Contacto</a></div></nav>
+  <div class="nav__right">
+    <button class="lang" id="lang-toggle" type="button" aria-label="Cambiar idioma / Change language"><span data-lang="es" class="is-on">ES</span><span class="lang__sep">/</span><span data-lang="en">EN</span></button>
+    <a class="nav__icon" data-wa="pedido" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+    <button class="nav__icon" type="button" data-cart-open aria-label="Carrito"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M6 7h12l1.2 12H4.8L6 7zm3 0V5.5a3 3 0 0 1 6 0V7"/></svg><span class="nav__count is-zero" data-cart-count>0</span></button>
+    <a class="btn btn--gold btn--sm" href="chocolates.html" data-en="Shop">Comprar</a>
+    <button class="nav__icon burger" id="burger" type="button" aria-label="Menú" aria-expanded="false" aria-controls="mnav"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+  </div>
+</header>
+<nav class="mnav" id="mnav" hidden aria-label="Menú móvil"><a href="chocolates.html" data-en="Shop">Tienda</a><span class="mnav__sub2"><a href="chocolates.html#barras" data-en="Bars">Barras</a><a href="chocolates.html#coberturas" data-en="Couvertures">Coberturas</a><a href="chocolates.html#snacks" data-en="Cacao snacks">Snacks de cacao</a><a href="chocolates.html#mini" data-en="Mini bars">Minibarras</a></span><a href="coberturas.html" data-en="Couvertures">Coberturas</a><a href="origen.html" data-en="Origin">Origen</a><a href="inclusion.html" data-en="Inclusion">Inclusión</a><a href="premios.html" data-en="Awards">Premios</a><a href="regalos.html" data-en="Gifts">Regalos</a><span class="mnav__sub2"><a href="regalos.html" data-en="Gift what is right">Regala lo correcto</a><a href="navidad.html" data-en="Corporate Christmas">Navidad corporativa</a></span><a href="empresas.html" data-en="Business">Empresas</a><span class="mnav__sub2"><a href="empresas.html#corporativo" data-en="Corporate gifts">Regalos corporativos</a><a href="empresas.html#horeca" data-en="HORECA · chefs">HORECA · chefs</a><a href="creation-lab.html" data-en="Creation Lab">Creation Lab</a></span><a href="contacto.html" data-en="Contact">Contacto</a><p class="mnav__sub" data-en="Free shipping from $30 · WhatsApp, card or transfer">Envío gratis desde $30 · WhatsApp, tarjeta o transferencia</p></nav>
+
+<main>
+<section class="section section--tight cart__head">
+  <div class="wrap">
+    <p class="eyebrow" data-en="Step 2 of 3">Paso 2 de 3</p>
+    <h1 class="h2" data-en="Complete your order">Finalizar pedido</h1>
+    <p class="lead" data-en="Four blocks and you are done. We write to you on WhatsApp to confirm shipping and payment before anything is charged.">Cuatro bloques y listo. Te escribimos por WhatsApp para confirmar envío y pago antes de cobrar nada.</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap ck__grid">
+
+    <form class="ck__form" id="ck-form" novalidate>
+
+      <!-- 1 · Contacto -->
+      <fieldset class="bform ck__card">
+        <legend class="ck__legend"><span class="ck__step">01</span><span data-en="Contact">Contacto</span></legend>
+        <label class="ck__f">
+          <span data-en="Full name">Nombre completo</span>
+          <input type="text" name="nombre" autocomplete="name" required aria-describedby="err-nombre" data-es="Ej.: Ana Vega Loor" data-en="E.g.: Ana Vega Loor" placeholder="Ej.: Ana Vega Loor">
+          <em class="ck__err" id="err-nombre" role="alert"></em>
+        </label>
+        <div class="bform__row">
+          <label class="ck__f">
+            <span data-en="Email">Correo electrónico</span>
+            <input type="email" name="email" autocomplete="email" required aria-describedby="err-email" data-es="tu@correo.com" data-en="you@email.com" placeholder="tu@correo.com">
+            <em class="ck__err" id="err-email" role="alert"></em>
+          </label>
+          <label class="ck__f">
+            <span data-en="WhatsApp">WhatsApp</span>
+            <input type="tel" name="telefono" autocomplete="tel" required aria-describedby="err-telefono" data-es="09XXXXXXXX" data-en="09XXXXXXXX" placeholder="09XXXXXXXX">
+            <em class="ck__err" id="err-telefono" role="alert"></em>
+          </label>
+        </div>
+        <p class="small" data-en="We use WhatsApp to confirm the order and to tell you when it ships.">Usamos WhatsApp para confirmar el pedido y avisarte cuando sale.</p>
+      </fieldset>
+
+      <!-- 2 · Entrega -->
+      <fieldset class="bform ck__card">
+        <legend class="ck__legend"><span class="ck__step">02</span><span data-en="Delivery">Entrega</span></legend>
+
+        <div class="ck__radios">
+          <div class="ck__radio">
+            <input type="radio" id="del-envio" name="entrega" value="envio" checked>
+            <label for="del-envio">
+              <strong data-en="Home delivery">Envío a domicilio</strong>
+              <span data-en="Free from $30. Below that, the cost is confirmed for your city before you pay.">Gratis desde $30. Por debajo, el costo se confirma según tu ciudad antes de pagar.</span>
+            </label>
+          </div>
+          <div class="ck__radio">
+            <input type="radio" id="del-retiro" name="entrega" value="retiro">
+            <label for="del-retiro">
+              <strong data-en="Pick-up at the plant (Quito)">Retiro en la planta (Quito)</strong>
+              <span data-en="No shipping cost. We tell you on WhatsApp when it is ready.">Sin costo de envío. Te avisamos por WhatsApp cuando esté listo.</span>
+            </label>
+          </div>
+        </div>
+
+        <div id="ck-shipfields" class="ck__fields">
+          <label class="ck__f">
+            <span data-en="City">Ciudad</span>
+            <select name="ciudad" id="ck-city" required aria-describedby="err-ciudad">
+              <option value="Quito">Quito</option>
+              <option value="Guayaquil">Guayaquil</option>
+              <option value="Cuenca">Cuenca</option>
+              <option value="Ambato">Ambato</option>
+              <option value="Manta">Manta</option>
+              <option value="Otra" data-en="Other">Otra</option>
+            </select>
+            <em class="ck__err" id="err-ciudad" role="alert"></em>
+          </label>
+          <p class="small" id="ck-city-other" hidden data-en="Start the address with your city so we can quote the shipping cost.">Empieza la dirección con tu ciudad para que podamos cotizar el envío.</p>
+          <label class="ck__f">
+            <span data-en="Address">Dirección</span>
+            <input type="text" name="direccion" autocomplete="street-address" aria-describedby="err-direccion" data-es="Calle principal, número, secundaria" data-en="Main street, number, cross street" placeholder="Calle principal, número, secundaria">
+            <em class="ck__err" id="err-direccion" role="alert"></em>
+          </label>
+          <label class="ck__f">
+            <span data-en="Reference (optional)">Referencia (opcional)</span>
+            <input type="text" name="referencia" data-es="Edificio, piso, punto conocido" data-en="Building, floor, landmark" placeholder="Edificio, piso, punto conocido">
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- 3 · Factura electrónica SRI -->
+      <fieldset class="bform ck__card">
+        <legend class="ck__legend"><span class="ck__step">03</span><span data-en="SRI electronic invoice">Factura electrónica SRI</span></legend>
+
+        <div class="ck__check">
+          <input type="checkbox" id="ck-same">
+          <label for="ck-same" data-en="Use the same contact details">Usar los mismos datos de contacto</label>
+        </div>
+
+        <label class="ck__f">
+          <span data-en="ID (10 digits) or RUC (13 digits)">Cédula (10 dígitos) o RUC (13 dígitos)</span>
+          <input type="text" name="documento" inputmode="numeric" maxlength="13" required aria-describedby="err-documento" data-es="1712345678" data-en="1712345678" placeholder="1712345678">
+          <em class="ck__err" id="err-documento" role="alert"></em>
+        </label>
+        <label class="ck__f">
+          <span data-en="Name or company name">Nombre o razón social</span>
+          <input type="text" name="razon" required aria-describedby="err-razon" data-es="Como debe salir en la factura" data-en="As it should appear on the invoice" placeholder="Como debe salir en la factura">
+          <em class="ck__err" id="err-razon" role="alert"></em>
+        </label>
+        <label class="ck__f">
+          <span data-en="Tax address">Dirección fiscal</span>
+          <input type="text" name="fiscal" required aria-describedby="err-fiscal" data-es="Dirección registrada en el SRI" data-en="Address registered with the SRI" placeholder="Dirección registrada en el SRI">
+          <em class="ck__err" id="err-fiscal" role="alert"></em>
+        </label>
+        <p class="small" data-en="The invoice arrives at your email as an SRI XML and PDF.">La factura llega a tu correo como XML y PDF del SRI.</p>
+      </fieldset>
+
+      <!-- 4 · Pago -->
+      <fieldset class="bform ck__card">
+        <legend class="ck__legend"><span class="ck__step">04</span><span data-en="Payment">Pago</span></legend>
+
+        <div class="ck__radios">
+          <div class="ck__radio">
+            <input type="radio" id="pay-transferencia" name="pago" value="transferencia" checked>
+            <label for="pay-transferencia">
+              <strong data-en="Bank transfer">Transferencia bancaria</strong>
+              <span data-en="We send you the account details on WhatsApp when we confirm the order.">Te enviamos los datos de la cuenta por WhatsApp al confirmar el pedido.</span>
+            </label>
+          </div>
+          <div class="ck__radio">
+            <input type="radio" id="pay-tarjeta" name="pago" value="tarjeta">
+            <label for="pay-tarjeta">
+              <strong data-en="Card or PayPhone">Tarjeta o PayPhone</strong>
+              <span data-en="Online gateway pending activation; meanwhile we send you the payment link.">Pasarela en línea por activarse; mientras tanto te enviamos el enlace de pago.</span>
+              <em class="note-real">[DATO RIGHTS]</em>
+            </label>
+          </div>
+          <div class="ck__radio">
+            <input type="radio" id="pay-contraentrega" name="pago" value="contraentrega">
+            <label for="pay-contraentrega">
+              <strong data-en="Cash on delivery (Quito only)">Contra entrega (solo Quito)</strong>
+              <span data-en="You pay when you receive it, within Quito or at the plant.">Pagas al recibir, dentro de Quito o en la planta.</span>
+            </label>
+          </div>
+          <div class="ck__radio">
+            <input type="radio" id="pay-whatsapp" name="pago" value="whatsapp">
+            <label for="pay-whatsapp">
+              <strong data-en="Close it on WhatsApp">Cerrar por WhatsApp</strong>
+              <span data-en="A person answers you and closes the order with you.">Una persona te responde y cierra el pedido contigo.</span>
+            </label>
+          </div>
+        </div>
+        <em class="ck__err" id="err-pago" role="alert"></em>
+      </fieldset>
+
+      <!-- 5 · Nota del pedido -->
+      <fieldset class="bform ck__card">
+        <legend class="ck__legend"><span class="ck__step">05</span><span data-en="Order note">Nota del pedido</span></legend>
+        <label class="ck__f">
+          <span data-en="Anything we should know (optional)">Algo que debamos saber (opcional)</span>
+          <textarea name="nota" rows="3" maxlength="400" data-es="Horario de entrega, nombre de quien recibe, dedicatoria del regalo…" data-en="Delivery window, who receives it, gift dedication…" placeholder="Horario de entrega, nombre de quien recibe, dedicatoria del regalo…"></textarea>
+        </label>
+      </fieldset>
+
+      <p class="ck__msg" id="ck-msg" role="alert"></p>
+      <button class="btn btn--gold btn--block ck__submit" type="submit" id="ck-submit" data-en="Confirm order">Confirmar pedido</button>
+      <p class="small ck__legal" data-en="Confirming does not charge anything yet: we write to you on WhatsApp with the shipping cost, if any, and the payment details.">Confirmar todavía no cobra nada: te escribimos por WhatsApp con el costo de envío, si aplica, y los datos de pago.</p>
+    </form>
+
+    <aside class="ck__aside" id="ck-summary">
+      <div class="ck__summary">
+        <h2 class="h3" data-en="Your order">Tu pedido</h2>
+        <ul class="ck__items" id="ck-items"></ul>
+        <dl class="cart__rows">
+          <div class="cart__row">
+            <dt data-en="Subtotal">Subtotal</dt>
+            <dd id="ck-subtotal">$0.00</dd>
+          </div>
+          <div class="cart__row">
+            <dt data-en="Shipping">Envío</dt>
+            <dd id="ck-ship" data-en="Shipping cost to be confirmed for your city">Costo de envío por confirmar según tu ciudad</dd>
+          </div>
+          <div class="cart__row cart__row--total">
+            <dt data-en="Total">Total</dt>
+            <dd id="ck-total">$0.00</dd>
+          </div>
+        </dl>
+        <p class="small" id="ck-total-note" data-en="The total shows the subtotal. Shipping is confirmed when we accept your order.">El total muestra el subtotal. El envío se confirma cuando aceptamos tu pedido.</p>
+        <a class="link-arrow" href="carrito.html" data-en="Edit the cart">Editar el carrito</a>
+        <ul class="cart__facts">
+          <li data-en="Fine-aroma Nacional cacao, made at the Quito plant">Cacao Nacional fino de aroma, hecho en la planta de Quito</li>
+          <li data-en="Every bar supports the labour inclusion of people with disabilities">Cada barra apoya la inclusión laboral de personas con discapacidad</li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__brand"><span class="nav__word">Rights</span><span class="nav__dot">.</span>
+    <p data-en="Fine-aroma Nacional cacao · Quito, Ecuador">Cacao Nacional fino de aroma · Quito, Ecuador</p>
+    <p data-en="You have the right to the best chocolate. They, to equal opportunity.">Tú tienes derecho al mejor chocolate. Ellos, a igualdad de oportunidades.</p>
+    <p class="footer__slogan" data-en="What’s done right, tastes extraordinary.">Lo correcto sabe extraordinario.</p>
+  </div>
+  <div class="footer__cols">
+    <div><h4>Made Right.</h4><a href="chocolates.html#barras" data-en="Bars">Barras</a><a href="chocolates.html#coberturas" data-en="Couvertures">Coberturas</a><a href="chocolates.html#snacks" data-en="Cacao snacks">Snacks de cacao</a><a href="chocolates.html#mini" data-en="Mini bars">Minibarras</a><a href="regalos.html" data-en="Gifts">Regalos</a><a href="navidad.html" data-en="Corporate Christmas">Navidad corporativa</a></div>
+    <div><h4>Rights</h4><a href="origen.html" data-en="Ecuador: the best cacao">Ecuador: el mejor cacao</a><a href="inclusion.html" data-en="The road to inclusion">La ruta de la inclusión</a><a href="inclusion.html#porque" data-en="Why Rights?">¿Por qué Rights?</a><a href="premios.html" data-en="Awards">Premios</a><a href="notas.html" data-en="Press and notes">Prensa y notas</a></div>
+    <div><h4 data-en="Business">Empresas</h4><a href="empresas.html#corporativo" data-en="Corporate gifts">Regalos corporativos</a><a href="coberturas.html" data-en="Chefs · art in motion">Chefs · El arte en movimiento</a><a href="empresas.html#horeca">HORECA</a><a href="creation-lab.html">Creation Lab</a></div>
+    <div><h4 data-en="Help">Ayuda</h4><a href="envios.html" data-en="Shipping and returns">Envíos y devoluciones</a><a href="contacto.html#faq" data-en="FAQ">Preguntas frecuentes</a><a href="carrito.html" data-en="Your cart">Tu carrito</a><a data-wa="pedido" href="#" target="_blank" rel="noopener">WhatsApp</a><a href="terminos.html" data-en="Terms">Términos y condiciones</a><a href="privacidad.html" data-en="Privacy">Privacidad</a><a href="https://www.instagram.com/rights.chocolate/" target="_blank" rel="noopener">Instagram</a></div>
+  </div>
+  <p class="footer__legal"><span class="seal">Made Right.</span><span>© <span id="year"></span> Rights Foods S.A. · <span data-en="Preview for review. Items marked [DATO RIGHTS] are waiting for Rights to confirm them.">Versión para revisión. Lo marcado [DATO RIGHTS] espera confirmación de Rights.</span></span></p>
+</footer>
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer__bg" data-cart-close></div>
+  <aside class="drawer__panel" role="dialog" aria-label="Carrito">
+    <header class="drawer__head"><h3 data-en="Your cart">Tu carrito</h3><button class="drawer__close" type="button" data-cart-close aria-label="Cerrar">×</button></header>
+    <div class="ship"><p id="ship-msg"></p><div class="ship__bar"><i id="ship-bar"></i></div></div>
+    <div class="drawer__items" id="cart-items"></div>
+    <footer class="drawer__foot">
+      <p class="drawer__total"><span>Subtotal</span><strong id="cart-total">$0.00</strong></p>
+      <p class="drawer__cutoff" data-cutoff></p>
+      <p class="small" data-en="Choose how to pay:">Elige cómo pagar:</p>
+      <a class="btn btn--gold btn--block" id="checkout-wa" href="#" target="_blank" rel="noopener" data-en="Order on WhatsApp">Pedir por WhatsApp</a>
+      <a class="btn btn--dark btn--block" id="checkout-card" href="#" data-en="Pay by card">Pagar con tarjeta</a>
+      <p class="drawer__pay" data-en="Transfer, card or WhatsApp · SRI e-invoice · we confirm shipping before you pay">Transferencia, tarjeta o WhatsApp · factura SRI · confirmamos el envío antes de que pagues</p>
+    </footer>
+  </aside>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div id="concierge-widget" class="rita">
+  <button class="rita__bubble" id="rita-btn" type="button" aria-expanded="false"><span class="rita__r">R</span><span class="rita__label" data-en="Ask Rita">Pregúntale a Rita</span></button>
+  <div class="rita__panel" id="rita-panel" hidden>
+    <p class="rita__title">Rita</p>
+    <p class="rita__text" data-en="Rights’ bilingual concierge. I help you pick a bar, choose a gift, track an order or set up a corporate order.">Concierge bilingüe de Rights. Te ayudo a elegir barra, escoger un regalo, rastrear un pedido o armar un pedido para tu empresa.</p>
+    <div class="rita__q"><a data-wa="cata" href="#" target="_blank" rel="noopener" data-en="Which bar is for me?">¿Qué barra es para mí?</a><a data-wa="regalo" href="#" target="_blank" rel="noopener" data-en="I need a gift">Necesito un regalo</a><a data-wa="empresa" href="#" target="_blank" rel="noopener" data-en="For my business">Para mi empresa</a></div>
+  </div>
+</div>
+
+<script src="js/shop.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
