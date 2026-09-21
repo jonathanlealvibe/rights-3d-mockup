@@ -4,7 +4,7 @@
   --cacao:#1F1008;--cacao-2:#150a04;--molten:#4A2616;--gold:#C9A24A;--gold-2:#E2C27A;--gold-3:#8a6c2a;--gold-soft:#f1e6cc;
   --ivory:#F4ECDD;--paper:#FBF7F0;--white:#fffdf9;--ink:#241812;--ink-70:rgba(36,24,18,.72);--ink-45:rgba(36,24,18,.5);--line:rgba(36,24,18,.12);
   --ivory-70:rgba(244,236,221,.72);--ivory-45:rgba(244,236,221,.45);--ivory-15:rgba(244,236,221,.15);
-  --serif:"Fraunces",Georgia,serif;--sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --serif:"Open Sauce One","Helvetica Neue",Arial,sans-serif;--sans:"Open Sauce One","Helvetica Neue",Arial,sans-serif;--sub:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   --pad:clamp(20px,5vw,72px);--ease:cubic-bezier(.22,.61,.36,1);--r:14px;--r-sm:10px;--max:1360px;
 }
 *{box-sizing:border-box}
@@ -12,12 +12,12 @@ html{scroll-behavior:smooth;scroll-padding-top:96px}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 img,video,canvas{display:block;max-width:100%}
-h1,h2,h3,h4{font-family:var(--serif);font-weight:400;margin:0;line-height:1.05;letter-spacing:-.01em}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;margin:0;line-height:1.05;letter-spacing:-.01em}
 p{margin:0}ul,ol{margin:0;padding:0;list-style:none}button{font:inherit}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .gold{color:var(--gold)}
 .wrap{max-width:var(--max);margin:0 auto}
-.eyebrow{font-size:.72rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-3);margin-bottom:1rem}
+.eyebrow{font-family:var(--sub);font-size:.72rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-3);margin-bottom:1rem}
 .on-dark .eyebrow,.dark .eyebrow{color:var(--gold)}
 .h1{font-size:clamp(2.4rem,5.6vw,4.8rem);font-variation-settings:"opsz" 144;letter-spacing:-.025em;line-height:1}
 .h2{font-size:clamp(2rem,4.2vw,3.4rem);font-variation-settings:"opsz" 144}

@@ -205,7 +205,7 @@
   bi($('pdp-eyebrow'), eyeEs, eyeEn);
   bi($('pdp-title'), p.name, p.nameEn);
   var echo = $('pdp-echo');
-  if (p.cat === 'barra') bi(echo, 'Hecho bien. Una obra maestra.', 'Done right. A masterpiece.');
+  if (p.cat === 'barra') bi(echo, 'Hecho bien: una obra maestra.', 'Done right: a masterpiece.');
   else if (p.cat === 'cobertura') bi(echo, 'El arte en movimiento.', 'Art in motion.');
   else if (p.cat === 'regalo') bi(echo, 'Regala lo correcto.', 'Gift what is right.');
   else bi(echo, 'Hecho bien. Lo correcto sabe extraordinario.', 'Done right. What’s done right, tastes extraordinary.');
@@ -250,7 +250,7 @@
   if (p.cat === 'cobertura') {
     bi($('pdp-pairs-title'), 'Aplicaciones', 'Applications');
     $('pdp-pairs').innerHTML = APPS.map(function (a) { return chip(a.es, a.en); }).join('');
-    bi($('pdp-pairs-note'), 'Un solo chocolate. Infinitas interpretaciones culinarias.', 'One chocolate. Infinite culinary interpretations.');
+    bi($('pdp-pairs-note'), 'Un solo chocolate con infinitas interpretaciones culinarias.', 'One chocolate with infinite culinary interpretations.');
   } else {
     $('pdp-pairs').innerHTML = p.pairs.map(function (k) { return chip(P[k].es, P[k].en); }).join('');
   }
